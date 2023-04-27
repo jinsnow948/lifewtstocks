@@ -1,0 +1,491 @@
+2023-04-23 11:11:43,430 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:11:43,430 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:12:00,774 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:12:00] "POST /theme HTTP/1.1" 200 -
+2023-04-23 11:12:05,004 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:12:05] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 11:12:05,074 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:12:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 11:12:05,132 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:12:05] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 11:12:15,130 [ERROR] pageloader.py:175 - Error : not all arguments converted during string formatting
+2023-04-23 11:12:15,131 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:12:15] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 11:12:15,156 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:12:15] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:12:31,656 [ERROR] pageloader.py:175 - Error : not all arguments converted during string formatting
+2023-04-23 11:12:31,656 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:12:31] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 11:12:31,695 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:12:31] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:19:09,181 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:19:09,182 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:19:19,259 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:19:19,260 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:24:45,269 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:24:45,269 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:24:58,152 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:24:58] "POST /theme HTTP/1.1" 200 -
+2023-04-23 11:25:02,236 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:25:02] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 11:25:02,302 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:25:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 11:25:02,362 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:25:02] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 11:25:14,475 [ERROR] app.py:1744 - Exception on /theme_register [POST]
+Traceback (most recent call last):
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/jinwon/lifewtstocks/pageloader.py", line 159, in theme_register
+    theme_detail_name = request.get('theme_detail_name')
+AttributeError: 'Request' object has no attribute 'get'
+2023-04-23 11:25:14,477 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:25:14] "[35m[1mPOST /theme_register HTTP/1.1[0m" 500 -
+2023-04-23 11:26:29,183 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:26:29,183 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:26:35,392 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:26:35] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:26:39,966 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:26:39] "POST /theme HTTP/1.1" 200 -
+2023-04-23 11:26:44,520 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:26:44] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 11:26:44,586 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:26:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 11:26:44,650 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:26:44] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 11:26:59,501 [ERROR] pageloader.py:175 - Error : not all arguments converted during string formatting
+2023-04-23 11:26:59,502 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:26:59] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 11:26:59,521 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:26:59] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:29:57,512 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:29:57,513 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:30:11,317 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:30:11] "POST /theme HTTP/1.1" 200 -
+2023-04-23 11:30:15,256 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:30:15] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 11:30:15,325 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:30:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 11:30:15,389 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:30:15] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 11:30:28,216 [ERROR] pageloader.py:175 - Error : not all arguments converted during string formatting
+2023-04-23 11:30:28,217 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:30:28] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 11:30:28,244 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:30:28] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:35:47,397 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:35:47,397 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:35:53,337 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:35:53] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 11:35:53,406 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:35:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 11:35:53,480 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:35:53] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 11:36:03,210 [ERROR] pageloader.py:175 - Error : not all arguments converted during string formatting
+2023-04-23 11:36:03,211 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:36:03] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 11:36:03,236 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:36:03] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:37:39,161 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:37:39,161 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:37:46,278 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:37:46] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 11:37:46,383 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:37:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 11:37:46,449 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:37:46] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 11:38:08,760 [ERROR] pageloader.py:177 - Error : not all arguments converted during string formatting
+2023-04-23 11:38:08,761 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:38:08] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 11:38:08,787 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:38:08] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:38:42,064 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:38:42,065 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:38:47,981 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:38:47] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:38:48,042 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:38:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 11:38:48,107 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:38:48] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 11:38:51,314 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:38:51] "POST /theme HTTP/1.1" 200 -
+2023-04-23 11:38:54,617 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:38:54] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 11:38:54,745 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:38:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 11:38:54,801 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:38:54] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 11:39:05,730 [ERROR] pageloader.py:177 - Error : not all arguments converted during string formatting
+2023-04-23 11:39:05,731 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:39:05] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 11:39:05,752 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:39:05] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:40:09,914 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:40:09,914 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:40:16,010 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:40:16] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 11:40:16,382 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:40:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 11:40:16,454 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:40:16] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 11:40:26,268 [ERROR] pageloader.py:177 - Error : local variable 'sql' referenced before assignment
+2023-04-23 11:40:26,268 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:40:26] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 11:40:26,294 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:40:26] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:41:02,654 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:41:02,654 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:41:07,486 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:41:07] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 11:41:07,557 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:41:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 11:41:07,624 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:41:07] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 11:41:18,026 [ERROR] pageloader.py:177 - Error : name 'sql' is not defined
+2023-04-23 11:41:18,026 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:41:18] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 11:41:18,051 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:41:18] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:42:06,884 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:42:06,884 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:42:11,748 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:42:11] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 11:42:11,815 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:42:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 11:42:11,881 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:42:11] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 11:42:25,845 [INFO] pageloader.py:171 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                          VALUES (?, ?, ?, ?, ?, ?)
+2023-04-23 11:42:25,845 [ERROR] pageloader.py:177 - Error : not all arguments converted during string formatting
+2023-04-23 11:42:25,846 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:42:25] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 11:42:25,870 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:42:25] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:45:20,781 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:45:20,781 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:45:27,821 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:45:27] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 11:45:27,892 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:45:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 11:45:27,962 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:45:27] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 11:45:38,162 [INFO] pageloader.py:171 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                          VALUES (?, ?, ?, ?, ?, ?)
+2023-04-23 11:45:38,163 [DEBUG] pageloader.py:172 - Parameters: ('2차전지', '장비주', '254120', '자비스', None, None)
+2023-04-23 11:45:38,163 [ERROR] pageloader.py:177 - Error : not all arguments converted during string formatting
+2023-04-23 11:45:38,164 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:45:38] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 11:45:38,189 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:45:38] "GET /theme HTTP/1.1" 200 -
+2023-04-23 11:47:24,923 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 11:47:24,923 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 11:47:32,069 [INFO] pageloader.py:171 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                          VALUES (?, ?, ?, ?, ?, ?)
+2023-04-23 11:47:32,070 [DEBUG] pageloader.py:172 - Parameters: ('2차전지', '장비주', '254120', '자비스', None, None)
+2023-04-23 11:47:32,070 [ERROR] pageloader.py:177 - Error : not all arguments converted during string formatting
+2023-04-23 11:47:32,071 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:47:32] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 11:47:32,096 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 11:47:32] "GET /theme HTTP/1.1" 200 -
+2023-04-23 12:08:59,674 [ERROR] _internal.py:224 - 87.251.67.244 - - [23/Apr/2023 12:08:59] code 400, message Bad request version ('¶\x04îªÆÜ')
+2023-04-23 12:08:59,674 [INFO] _internal.py:224 - 87.251.67.244 - - [23/Apr/2023 12:08:59] "[35m[1m î  ê¡îõfü)>W$æøNÕÅ(CË´Úsè¿wi ;¿ ¶îªÆÜ[0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:41:56,311 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:41:56] "GET / HTTP/1.0" 200 -
+2023-04-23 13:41:56,721 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:41:56] code 400, message Bad request version ('RTSP/1.0')
+2023-04-23 13:41:56,721 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:41:56] "[35m[1mOPTIONS / RTSP/1.0[0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:02,113 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:02] code 400, message Bad HTTP/0.9 request type ('\x00')
+2023-04-23 13:42:02,113 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:02] "[35m[1m          versionbind   [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:07,320 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:07] code 400, message Bad request version ('0.12\x00')
+2023-04-23 13:42:07,321 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:07] "[35m[1m   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:12,511 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:12] code 400, message Bad request version ('GetClassName\x00\x00\x00\x02\x04\x00\x00\x00\x00\x01\x00')
+2023-04-23 13:42:12,511 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:12] "[35m[1m          GetClassName        [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:12,707 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:12] "OPTIONS / HTTP/1.0" 200 -
+2023-04-23 13:42:18,096 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:18] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+2023-04-23 13:42:18,096 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:18] "[35m[1m  (rþ          |                    [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:23,297 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:23] code 400, message Bad HTTP/0.9 request type ('\x00')
+2023-04-23 13:42:23,297 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:23] "[35m[1m            [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:23,487 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:23] code 400, message Bad request syntax ('HELP')
+2023-04-23 13:42:23,488 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:23] "[35m[1mHELP[0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:23,881 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:23] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+2023-04-23 13:42:23,881 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:23] "[35m[1m  S  O ?G×÷º,îê²`~ó ý{¹ÕÈwæÄÛ<=Ûoïn  (   [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:24,282 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:24] code 400, message Bad request version ('\x00/\x00')
+2023-04-23 13:42:24,282 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:24] "[35m[1m  i  eU§ärandom1random2random3random4   / [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:24,673 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:24] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+2023-04-23 13:42:24,673 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:24] "[35m[1m   qjn0k¡¢[0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:30,069 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:30] code 400, message Bad HTTP/0.9 request type ('l\x00')
+2023-04-23 13:42:30,069 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:30] "[35m[1ml          [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:30,267 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:30] "[33mGET /nice%20ports,/Trinity.txt.bak HTTP/1.0[0m" 404 -
+2023-04-23 13:42:30,664 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:30] code 400, message Bad request syntax ('\x01default')
+2023-04-23 13:42:30,664 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:30] "[35m[1mdefault[0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:31,069 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:31] code 400, message Bad request syntax ('0\x84\x00\x00\x00-\x02\x01\x07c\x84\x00\x00\x00$\x04\x00')
+2023-04-23 13:42:31,069 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:31] "[35m[1m0   -c   $ [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:36,467 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:36] code 400, message Bad HTTP/0.9 request type ('0')
+2023-04-23 13:42:36,468 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:36] "[35m[1m0`  [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:36,664 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:36] code 400, message Bad request version ('SIP/2.0')
+2023-04-23 13:42:36,665 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:36] "[35m[1mOPTIONS sip:nm SIP/2.0[0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:42,063 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:42] code 400, message Bad request syntax ('TNMP\x04\x00\x00\x00TNME\x00\x00\x04\x00')
+2023-04-23 13:42:42,063 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:42] "[35m[1mTNMP   TNME   [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:47,247 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:47] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00')
+2023-04-23 13:42:47,247 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:47] "[35m[1m  à     [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:52,434 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:52] code 400, message Bad request syntax ('DmdT\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x00\x11\x11\x00ÿ\x01ÿ\x13')
+2023-04-23 13:42:52,434 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:52] "[35m[1mDmdT           ÿÿ[0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:42:57,625 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:57] code 400, message Bad HTTP/0.9 request type (':\x00\x00\x00/\x00\x00\x00\x02\x00\x00@\x02\x0f\x00\x01\x00=\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00@')
+2023-04-23 13:42:57,625 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:42:57] "[35m[1m:   /     @  =            /         @                 [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:43:02,826 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:02] code 400, message Bad request syntax ('JRMI\x00\x02K')
+2023-04-23 13:43:02,826 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:02] "[35m[1mJRMI K[0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:43:08,031 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:08] code 400, message Bad request version ('\x00{\x000\x000\x000\x000\x00A\x00A\x000\x000\x00-\x000\x00A\x000\x000\x00-\x000\x000\x00a\x000\x00-\x00A\x00A\x000\x00A\x00-\x000\x000\x000\x000\x00A\x000\x00A\x00A\x000\x00A\x00A\x000\x00}\x00\x00\x00àmß_')
+2023-04-23 13:43:08,032 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:08] "[35m[1m  ýÎú°    MMS                    ðððð    N S P l a y e r / 9 . 0 . 0 . 2 9 8 0 ;   { 0 0 0 0 A A 0 0 - 0 A 0 0 - 0 0 a 0 - A A 0 A - 0 0 0 0 A 0 A A 0 A A 0 }   àmß_[0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:43:13,238 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:13] code 400, message Bad HTTP/0.9 request type ('\x00Z\x00\x00\x01\x00\x00\x00\x016\x01,\x00\x00\x08\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00')
+2023-04-23 13:43:13,238 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:13] "[35m[1m Z     6,   ÿ      :                4æ           (CONNECT_DATA=(COMMAND=version))[0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:43:18,425 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:18] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00H\x0f\x00\x00')
+2023-04-23 13:43:18,426 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:18] "[35m[1m 4            ( ÿ U   MSSQLServer H  [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:43:23,611 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:23] code 400, message Bad request syntax ('\x00\x03\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x0f\x00')
+2023-04-23 13:43:23,611 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:23] "[35m[1m              [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:43:28,805 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:28] code 400, message Bad request syntax ('GIOP\x01\x00\x01\x00$\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x06\x00\x00\x00abcdef\x00\x00\x04\x00\x00\x00get\x00\x00\x00\x00\x00')
+2023-04-23 13:43:28,805 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:28] "[35m[1mGIOP  $                abcdef     get     [0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:43:58,247 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:43:58] "GET / HTTP/1.1" 200 -
+2023-04-23 13:44:05,061 [ERROR] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:44:05] code 400, message Bad request syntax ('\x80\x00\x00(')
+2023-04-23 13:44:05,061 [INFO] _internal.py:224 - 50.31.21.6 - - [23/Apr/2023 13:44:05] "[35m[1m  ([0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:54:33,129 [ERROR] _internal.py:224 - 167.94.138.127 - - [23/Apr/2023 13:54:33] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03"ãÐÈÌ')
+2023-04-23 13:54:33,130 [INFO] _internal.py:224 - 167.94.138.127 - - [23/Apr/2023 13:54:33] "[35m[1m î  ê"ãÐÈÌ§Úb[0m" HTTPStatus.BAD_REQUEST -
+2023-04-23 13:54:34,513 [INFO] _internal.py:224 - 167.94.138.127 - - [23/Apr/2023 13:54:34] "GET / HTTP/1.1" 200 -
+2023-04-23 13:54:34,920 [INFO] _internal.py:224 - 167.94.138.127 - - [23/Apr/2023 13:54:34] "GET / HTTP/1.1" 200 -
+2023-04-23 13:54:35,301 [ERROR] _internal.py:224 - 167.94.138.127 - - [23/Apr/2023 13:54:35] code 505, message Invalid HTTP version (2.0)
+2023-04-23 13:54:35,302 [INFO] _internal.py:224 - 167.94.138.127 - - [23/Apr/2023 13:54:35] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+2023-04-23 13:54:35,680 [INFO] _internal.py:224 - 167.94.138.127 - - [23/Apr/2023 13:54:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-04-23 14:32:32,229 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:32:32] "POST /theme HTTP/1.1" 200 -
+2023-04-23 14:32:36,168 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:32:36] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 14:32:36,238 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:32:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 14:32:36,295 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:32:36] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 14:32:51,215 [INFO] pageloader.py:171 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                          VALUES (?, ?, ?, ?, ?, ?)
+2023-04-23 14:32:51,215 [DEBUG] pageloader.py:172 - Parameters: ('2차전지', '장비주', None, '자비스', None, None)
+2023-04-23 14:32:51,215 [ERROR] pageloader.py:177 - Error : not all arguments converted during string formatting
+2023-04-23 14:32:51,216 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:32:51] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 14:32:51,237 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:32:51] "GET /theme HTTP/1.1" 200 -
+2023-04-23 14:32:56,950 [INFO] pageloader.py:171 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                          VALUES (?, ?, ?, ?, ?, ?)
+2023-04-23 14:32:56,950 [DEBUG] pageloader.py:172 - Parameters: ('2차전지', '장비주', '254120', '자비스', None, None)
+2023-04-23 14:32:56,950 [ERROR] pageloader.py:177 - Error : not all arguments converted during string formatting
+2023-04-23 14:32:56,951 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:32:56] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 14:32:56,988 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:32:56] "GET /theme HTTP/1.1" 200 -
+2023-04-23 14:35:41,095 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 14:35:41,095 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 14:35:46,438 [INFO] pageloader.py:172 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                          VALUES (?, ?, ?, ?, ?, ?)
+2023-04-23 14:35:46,439 [DEBUG] pageloader.py:173 - Parameters: ('2차전지', '장비주', '254120', '자비스', None, None)
+2023-04-23 14:35:46,439 [ERROR] pageloader.py:178 - Error : not all arguments converted during string formatting
+2023-04-23 14:35:46,439 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:35:46] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 14:35:46,482 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:35:46] "GET /theme HTTP/1.1" 200 -
+2023-04-23 14:37:03,996 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 14:37:03,996 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 14:37:10,378 [INFO] pageloader.py:172 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                          VALUES (?, ?, ?, ?, ?, ?)
+2023-04-23 14:37:10,378 [DEBUG] pageloader.py:173 - Parameters: ('2차전지', '장비주', '254120', '자비스', None, None)
+2023-04-23 14:37:10,379 [ERROR] pageloader.py:178 - Error : not all arguments converted during string formatting
+2023-04-23 14:37:10,379 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:37:10] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 14:37:10,427 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:37:10] "GET /theme HTTP/1.1" 200 -
+2023-04-23 14:37:25,074 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:37:25] "GET /theme HTTP/1.1" 200 -
+2023-04-23 14:37:25,137 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:37:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 14:37:25,202 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:37:25] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 14:37:28,635 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:37:28] "POST /theme HTTP/1.1" 200 -
+2023-04-23 14:37:32,025 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:37:32] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 14:37:32,084 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:37:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 14:37:32,153 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:37:32] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 14:37:48,482 [INFO] pageloader.py:172 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                          VALUES (?, ?, ?, ?, ?, ?)
+2023-04-23 14:37:48,482 [DEBUG] pageloader.py:173 - Parameters: ('2차전지', '장비주', '254120', '자비스', None, None)
+2023-04-23 14:37:48,482 [ERROR] pageloader.py:178 - Error : not all arguments converted during string formatting
+2023-04-23 14:37:48,483 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:37:48] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 14:37:48,506 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:37:48] "GET /theme HTTP/1.1" 200 -
+2023-04-23 14:38:34,559 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 14:38:34,559 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 14:40:36,372 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 14:40:36,372 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 14:40:48,197 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:40:48] "POST /theme HTTP/1.1" 200 -
+2023-04-23 14:40:53,022 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:40:53] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 14:40:53,089 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:40:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 14:40:53,154 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:40:53] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 14:41:09,239 [INFO] pageloader.py:172 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                          VALUES (?, ?, ?, ?, ?, ?)
+2023-04-23 14:41:09,239 [DEBUG] pageloader.py:173 - Parameters: ('2차전지', '장비주', '254120', '자비스', None, None)
+2023-04-23 14:41:09,240 [ERROR] pageloader.py:178 - Error : not all arguments converted during string formatting
+2023-04-23 14:41:09,240 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:41:09] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 14:41:09,267 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:41:09] "GET /theme HTTP/1.1" 200 -
+2023-04-23 14:43:21,691 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 14:43:21,691 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 14:43:26,415 [INFO] pageloader.py:172 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                          VALUES (%s, %s, %s, %s, %s, %s)
+2023-04-23 14:43:26,415 [DEBUG] pageloader.py:173 - Parameters: ('2차전지', '장비주', '254120', '자비스', None, None)
+2023-04-23 14:43:26,416 [ERROR] pageloader.py:178 - Error : (1292, "Incorrect date value: '''' for column 'theme_occurrence_date' at row 1")
+2023-04-23 14:43:26,417 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:43:26] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 14:43:26,461 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:43:26] "GET /theme HTTP/1.1" 200 -
+2023-04-23 14:44:36,653 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 14:44:36,654 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 14:44:50,460 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:44:50] "POST /theme HTTP/1.1" 200 -
+2023-04-23 14:44:54,840 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:44:54] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 14:44:54,908 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:44:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 14:44:54,968 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:44:54] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 14:45:06,230 [INFO] pageloader.py:172 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                          VALUES (%s, %s, %s, %s, %s, %s)
+2023-04-23 14:45:06,230 [DEBUG] pageloader.py:173 - Parameters: ('2차전지', '장비주', '254120', '자비스', None, None)
+2023-04-23 14:45:06,230 [ERROR] pageloader.py:178 - Error : name 'converted_parameters' is not defined
+2023-04-23 14:45:06,231 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:45:06] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 14:45:06,255 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:45:06] "GET /theme HTTP/1.1" 200 -
+2023-04-23 14:45:39,912 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 14:45:39,912 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 14:45:45,714 [INFO] pageloader.py:172 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                          VALUES (%s, %s, %s, %s, %s, %s)
+2023-04-23 14:45:45,714 [DEBUG] pageloader.py:173 - Parameters: ('2차전지', '장비주', '254120', '자비스', None, None)
+2023-04-23 14:45:45,735 [INFO] pageloader.py:175 - 2차전지이 insert 되었습니다!
+2023-04-23 14:45:45,751 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:45:45] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 14:45:45,793 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 14:45:45] "GET /theme HTTP/1.1" 200 -
+2023-04-23 16:05:44,970 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 16:05:44,970 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 16:05:58,706 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:05:58] "POST /theme HTTP/1.1" 200 -
+2023-04-23 16:06:02,241 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:06:02] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 16:06:02,309 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:06:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 16:06:02,373 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:06:02] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 16:06:23,734 [ERROR] app.py:1744 - Exception on /theme_register [POST]
+Traceback (most recent call last):
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/jinwon/lifewtstocks/pageloader.py", line 165, in theme_register
+    if action == 'insert':
+NameError: name 'action' is not defined
+2023-04-23 16:06:23,736 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:06:23] "[35m[1mPOST /theme_register HTTP/1.1[0m" 500 -
+2023-04-23 16:09:14,695 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 16:09:14,695 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 16:09:22,493 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:09:22] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 16:09:22,535 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:09:22] "GET /theme HTTP/1.1" 200 -
+2023-04-23 16:10:19,308 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 16:10:19,308 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 16:10:27,758 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:10:27] "POST /theme HTTP/1.1" 200 -
+2023-04-23 16:10:32,559 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:10:32] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 16:10:32,626 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:10:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 16:10:32,688 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:10:32] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 16:10:49,036 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:10:49] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 16:10:49,062 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:10:49] "GET /theme HTTP/1.1" 200 -
+2023-04-23 16:16:26,387 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 16:16:26,387 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 16:16:31,741 [ERROR] app.py:1744 - Exception on /theme_register [POST]
+Traceback (most recent call last):
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/jinwon/lifewtstocks/pageloader.py", line 166, in theme_register
+    console.log(action)
+NameError: name 'console' is not defined
+2023-04-23 16:16:31,743 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:16:31] "[35m[1mPOST /theme_register HTTP/1.1[0m" 500 -
+2023-04-23 16:16:52,604 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:16:52] "POST /theme HTTP/1.1" 200 -
+2023-04-23 16:16:56,822 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:16:56] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 16:16:56,890 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:16:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 16:16:56,955 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:16:56] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 16:17:15,078 [ERROR] app.py:1744 - Exception on /theme_register [POST]
+Traceback (most recent call last):
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jinwon/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/jinwon/lifewtstocks/pageloader.py", line 166, in theme_register
+    console.log(action)
+NameError: name 'console' is not defined
+2023-04-23 16:17:15,080 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:17:15] "[35m[1mPOST /theme_register HTTP/1.1[0m" 500 -
+2023-04-23 16:18:03,968 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 16:18:03,969 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 16:18:09,035 [INFO] pageloader.py:166 - None
+2023-04-23 16:18:09,036 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:18:09] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 16:18:09,084 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:18:09] "GET /theme HTTP/1.1" 200 -
+2023-04-23 16:25:29,243 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-23 16:25:29,244 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-23 16:25:38,152 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:25:38] "POST /theme HTTP/1.1" 200 -
+2023-04-23 16:25:42,279 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:25:42] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 16:25:42,347 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:25:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 16:25:42,410 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:25:42] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 16:25:52,752 [INFO] pageloader.py:166 - insert
+2023-04-23 16:25:52,752 [INFO] pageloader.py:175 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                              VALUES (%s, %s, %s, %s, %s, %s)
+2023-04-23 16:25:52,752 [DEBUG] pageloader.py:176 - Parameters: ('에코프로', '폐배터리', '086520', '에코프로', None, None)
+2023-04-23 16:25:52,754 [INFO] pageloader.py:178 - 에코프로이 insert 되었습니다!
+2023-04-23 16:25:52,758 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:25:52] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 16:25:52,785 [INFO] _internal.py:224 - 222.104.166.49 - - [23/Apr/2023 16:25:52] "GET /theme HTTP/1.1" 200 -
+2023-04-23 17:24:55,777 [INFO] _internal.py:224 - 118.235.32.20 - - [23/Apr/2023 17:24:55] "GET / HTTP/1.1" 200 -
+2023-04-23 17:24:55,854 [INFO] _internal.py:224 - 118.235.32.20 - - [23/Apr/2023 17:24:55] "GET /static/style.css HTTP/1.1" 200 -
+2023-04-23 17:24:55,953 [INFO] _internal.py:224 - 118.235.32.20 - - [23/Apr/2023 17:24:55] "GET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1" 200 -
+2023-04-23 17:24:56,512 [INFO] _internal.py:224 - 118.235.32.20 - - [23/Apr/2023 17:24:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-04-23 17:25:07,061 [INFO] _internal.py:224 - 118.235.32.20 - - [23/Apr/2023 17:25:07] "GET /theme HTTP/1.1" 200 -
+2023-04-23 17:25:07,193 [INFO] _internal.py:224 - 118.235.32.20 - - [23/Apr/2023 17:25:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 17:25:15,837 [INFO] _internal.py:224 - 118.235.32.20 - - [23/Apr/2023 17:25:15] "POST /theme HTTP/1.1" 200 -
+2023-04-23 17:25:32,097 [INFO] _internal.py:224 - 118.235.32.20 - - [23/Apr/2023 17:25:32] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 17:25:32,212 [INFO] _internal.py:224 - 118.235.32.20 - - [23/Apr/2023 17:25:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 17:25:32,318 [INFO] _internal.py:224 - 118.235.32.20 - - [23/Apr/2023 17:25:32] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 17:29:48,973 [INFO] pageloader.py:166 - insert
+2023-04-23 17:29:48,973 [INFO] pageloader.py:175 - SQL Query: INSERT INTO theme_info (theme_name, theme_detail_name, related_stock_code, related_stock_name, theme_occurrence_date, theme_description)
+                              VALUES (%s, %s, %s, %s, %s, %s)
+2023-04-23 17:29:48,973 [DEBUG] pageloader.py:176 - Parameters: ('2차전지', '양극재', '247540', '에코프로비엠', None, None)
+2023-04-23 17:29:48,975 [INFO] pageloader.py:178 - 2차전지이 insert 되었습니다!
+2023-04-23 17:29:48,978 [INFO] _internal.py:224 - 118.235.32.20 - - [23/Apr/2023 17:29:48] "[32mPOST /theme_register HTTP/1.1[0m" 302 -
+2023-04-23 17:29:49,087 [INFO] _internal.py:224 - 118.235.32.20 - - [23/Apr/2023 17:29:49] "GET /theme HTTP/1.1" 200 -
+2023-04-23 18:03:51,201 [INFO] _internal.py:224 - 220.89.89.89 - - [23/Apr/2023 18:03:51] "GET /theme_register HTTP/1.1" 200 -
+2023-04-23 18:03:52,018 [INFO] _internal.py:224 - 220.89.89.89 - - [23/Apr/2023 18:03:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-23 18:03:52,111 [INFO] _internal.py:224 - 220.89.89.89 - - [23/Apr/2023 18:03:52] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-23 18:03:52,181 [INFO] _internal.py:224 - 220.89.89.89 - - [23/Apr/2023 18:03:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-04-23 20:36:57,300 [INFO] _internal.py:224 - 87.236.176.121 - - [23/Apr/2023 20:36:57] "GET / HTTP/1.1" 200 -
+2023-04-24 00:42:07,098 [INFO] _internal.py:224 - 45.55.65.23 - - [24/Apr/2023 00:42:07] "GET / HTTP/1.0" 200 -
+2023-04-24 00:47:25,443 [ERROR] _internal.py:224 - 91.191.209.206 - - [24/Apr/2023 00:47:25] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2023-04-24 00:47:25,443 [INFO] _internal.py:224 - 91.191.209.206 - - [24/Apr/2023 00:47:25] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+2023-04-24 00:54:47,682 [INFO] _internal.py:224 - 45.55.65.23 - - [24/Apr/2023 00:54:47] "GET / HTTP/1.1" 200 -
+2023-04-24 00:54:48,102 [INFO] _internal.py:224 - 45.55.65.23 - - [24/Apr/2023 00:54:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-04-24 06:38:22,034 [ERROR] _internal.py:224 - 162.142.125.217 - - [24/Apr/2023 06:38:22] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x8eø¢ÈWX')
+2023-04-24 06:38:22,035 [INFO] _internal.py:224 - 162.142.125.217 - - [24/Apr/2023 06:38:22] "[35m[1m î  êø¢ÈWX	êc7/y½Éí?+"úö»[0m" HTTPStatus.BAD_REQUEST -
+2023-04-24 06:38:23,458 [INFO] _internal.py:224 - 162.142.125.217 - - [24/Apr/2023 06:38:23] "GET / HTTP/1.1" 200 -
+2023-04-24 06:38:23,879 [INFO] _internal.py:224 - 162.142.125.217 - - [24/Apr/2023 06:38:23] "GET / HTTP/1.1" 200 -
+2023-04-24 06:38:24,281 [ERROR] _internal.py:224 - 162.142.125.217 - - [24/Apr/2023 06:38:24] code 505, message Invalid HTTP version (2.0)
+2023-04-24 06:38:24,281 [INFO] _internal.py:224 - 162.142.125.217 - - [24/Apr/2023 06:38:24] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+2023-04-24 06:38:24,694 [INFO] _internal.py:224 - 162.142.125.217 - - [24/Apr/2023 06:38:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-04-24 09:41:42,400 [INFO] _internal.py:224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.160:5000
+2023-04-24 09:41:42,400 [INFO] _internal.py:224 - [33mPress CTRL+C to quit[0m
+2023-04-24 09:41:45,249 [INFO] _internal.py:224 - 192.168.0.1 - - [24/Apr/2023 09:41:45] "GET / HTTP/1.1" 200 -
+2023-04-24 09:41:45,334 [INFO] _internal.py:224 - 192.168.0.1 - - [24/Apr/2023 09:41:45] "GET /static/style.css HTTP/1.1" 200 -
+2023-04-24 09:41:45,382 [INFO] _internal.py:224 - 192.168.0.1 - - [24/Apr/2023 09:41:45] "[36mGET /static/greg-rakozy-zGORXMe0Wlc-unsplash.jpg HTTP/1.1[0m" 304 -
+2023-04-24 09:41:45,787 [INFO] _internal.py:224 - 192.168.0.1 - - [24/Apr/2023 09:41:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-04-24 09:41:46,488 [INFO] _internal.py:224 - 192.168.0.1 - - [24/Apr/2023 09:41:46] "GET /theme HTTP/1.1" 200 -
+2023-04-24 09:41:46,539 [INFO] _internal.py:224 - 192.168.0.1 - - [24/Apr/2023 09:41:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-04-24 09:41:50,253 [INFO] _internal.py:224 - 192.168.0.1 - - [24/Apr/2023 09:41:50] "POST /theme HTTP/1.1" 200 -

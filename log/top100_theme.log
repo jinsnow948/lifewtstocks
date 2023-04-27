@@ -1,0 +1,244 @@
+2023-04-23 00:19:06,492 [INFO] top100_theme_updater.py:23 - start_date : 2023-04-17 00:00:00, end_date : 2023-04-21 00:00:00
+2023-04-23 00:19:06,507 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:06,604 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 500
+2023-04-23 00:19:06,620 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:06,668 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 558
+2023-04-23 00:19:06,684 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:06,937 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36264
+2023-04-23 00:19:07,006 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:07,239 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36263
+2023-04-23 00:19:07,309 [INFO] top100_theme_updater.py:41 -             종목명      시가      종가    변동폭    등락률       거래량          거래대금
+티커                                                                   
+058430  포스코스틸리온   46500   60400  13900  29.89   1183278   66018486700
+010580    에스엠벡셀    2325    3020    695  29.89  18501184   53440040370
+001390    KG케미칼   44700   52900   8200  18.34   3497038  176547005250
+306200     세아제강  131600  153800  22200  16.87    231853   35015289000
+052690     한전기술   73500   84200  10700  14.56   1950068  158176026600
+...         ...     ...     ...    ...    ...       ...           ...
+001740   SK네트웍스    4755    4905    150   3.15   1639894    7961500540
+015360   예스코홀딩스   32200   33200   1000   3.11     14747     486901300
+010770    평화홀딩스    3710    3825    115   3.10    156908     594897240
+015230     대창단조    6840    7050    210   3.07    673164    4776300880
+010040     한국내화    3115    3210     95   3.05    209755     667728020
+
+[100 rows x 7 columns]
+2023-04-23 00:19:07,354 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:07,556 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 438
+2023-04-23 00:19:07,573 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:07,664 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 550
+2023-04-23 00:19:07,681 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:07,887 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36277
+2023-04-23 00:19:08,010 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:08,269 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36276
+2023-04-23 00:19:08,330 [INFO] top100_theme_updater.py:41 -               종목명     시가     종가   변동폭    등락률       거래량          거래대금
+티커                                                                  
+000760       이화산업  15300  19890  4590  30.00    120059    2272804300
+118000       더메디팜    567    737   170  29.98  18793673   13063079346
+010580      에스엠벡셀   3020   3925   905  29.97  18874356   72095504090
+145210    다이나믹디자인   9510  12220  2710  28.50  19203626  209597406520
+000480       조선내화   8430  10370  1940  23.01   2725174   28229537050
+...           ...    ...    ...   ...    ...       ...           ...
+044820   코스맥스비티아이   8630   8790   160   1.85     24442     209700730
+024070     WISCOM   2750   2800    50   1.82    155990     438684480
+079160      CJCGV  15420  15700   280   1.82    200652    3152323660
+004020       현대제철  36950  37600   650   1.76    969793   36292356500
+00781K  코리아써키트2우B   9680   9850   170   1.76     12232     118281340
+
+[100 rows x 7 columns]
+2023-04-23 00:19:08,371 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:08,497 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 372
+2023-04-23 00:19:08,514 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:08,600 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 553
+2023-04-23 00:19:08,616 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:08,801 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36188
+2023-04-23 00:19:08,868 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:09,197 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36187
+2023-04-23 00:19:09,264 [INFO] top100_theme_updater.py:41 -             종목명     시가     종가   변동폭    등락률        거래량          거래대금
+티커                                                                 
+000760     이화산업  19890  25850  5960  29.96      81017    2065543000
+006740     영풍제지  12690  16490  3800  29.94     177405    2832299000
+093230     이아이디   2445   3175   730  29.86  128539805  374437087805
+025820     이구산업   5600   6980  1380  24.64   38153188  261986122550
+161000    애경케미칼  15730  18900  3170  20.15   27488046  519826489540
+...         ...    ...    ...   ...    ...        ...           ...
+138490  코오롱플라스틱  10600  10980   380   3.58     776315    8516127080
+000700    유수홀딩스   6800   7040   240   3.53      82203     572617540
+009900     명신산업  19900  20600   700   3.52     703658   14551270850
+035510    신세계IC  15800  16350   550   3.48     176918    2880964200
+010820      퍼스텍   3605   3730   125   3.47    2422555    8926221065
+
+[100 rows x 7 columns]
+2023-04-23 00:19:09,319 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:09,416 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 600
+2023-04-23 00:19:09,432 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:09,519 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 553
+2023-04-23 00:19:09,535 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:09,704 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36475
+2023-04-23 00:19:09,771 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:10,017 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36475
+2023-04-23 00:19:10,084 [INFO] top100_theme_updater.py:41 -               종목명      시가      종가   변동폭    등락률       거래량          거래대금
+티커                                                                    
+000760       이화산업   25850   33600  7750  29.98   1296938   41585721300
+152550  한국ANKOR유전     391     508   117  29.92  96985323   43675785258
+010820        퍼스텍    3730    4650   920  24.66  57232142  263325089485
+000480       조선내화   10310   12680  2370  22.99   5849643   70423261070
+005950       이수화학   42500   49700  7200  16.94  10549952  499309938300
+...           ...     ...     ...   ...    ...       ...           ...
+036530     SNT홀딩스   15380   15560   180   1.17     33942     529107280
+004440     삼일씨엔에스    5230    5290    60   1.15     11627      60909430
+000080      하이트진로   22200   22450   250   1.13    256481    5743702200
+259960       크래프톤  192400  194500  2100   1.09    214320   41968223100
+051600      한전KPS   37100   37500   400   1.08    302652   11480980400
+
+[100 rows x 7 columns]
+2023-04-23 00:19:10,127 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:10,215 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 328
+2023-04-23 00:19:10,231 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:10,343 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 557
+2023-04-23 00:19:10,357 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:10,572 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36320
+2023-04-23 00:19:10,641 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:10,964 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36320
+2023-04-23 00:19:11,033 [INFO] top100_theme_updater.py:41 -               종목명     시가     종가   변동폭    등락률        거래량          거래대금
+티커                                                                   
+152550  한국ANKOR유전    508    660   152  29.92  200741286  124740740883
+023960   에쓰씨엔지니어링   2075   2695   620  29.88    5124961   12807861395
+011500       한농화성  20150  26150  6000  29.78   24771081  599665107150
+053690      한미글로벌  32900  37250  4350  13.22    3059156  110615333800
+001250      GS글로벌   2800   3110   310  11.07   63108884  206476353750
+...           ...    ...    ...   ...    ...        ...           ...
+00806K       대덕1우   9470   9590   120   1.27       1534      14428870
+031820      콤텍시스템    807    817    10   1.24     956757     771084921
+000157      두산2우B  81900  82900  1000   1.22        305      25052600
+36328K    티와이홀딩스우  10740  10870   130   1.21       3037      32805870
+003650       미창석유  66000  66800   800   1.21       2225     147585200
+
+[100 rows x 7 columns]
+2023-04-23 00:19:37,376 [INFO] top100_theme_updater.py:23 - start_date : 2023-04-03 00:00:00, end_date : 2023-04-07 00:00:00
+2023-04-23 00:19:37,390 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:37,593 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 570
+2023-04-23 00:19:37,612 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:37,704 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 566
+2023-04-23 00:19:37,721 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:37,968 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36227
+2023-04-23 00:19:38,032 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:38,268 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36227
+2023-04-23 00:19:38,339 [INFO] top100_theme_updater.py:41 -               종목명     시가     종가    변동폭    등락률       거래량          거래대금
+티커                                                                   
+152550  한국ANKOR유전    170    221     51  30.00  66116751   13372758228
+025820       이구산업   3385   4400   1015  29.99  31440998  129835136410
+005420      코스모화학  49850  64800  14950  29.99   7622900  461728940250
+45226K    한화갤러리아우   9890  12850   2960  29.93   1354663   16773510260
+145210    다이나믹디자인   3890   5050   1160  29.82   2156673   10536249800
+...           ...    ...    ...    ...    ...       ...           ...
+058430    포스코스틸리온  41200  42500   1300   3.16    290745   12198290100
+294870  HDC현대산업개발  11290  11640    350   3.10    504689    5832090550
+013700      까뮤이앤씨   1526   1573     47   3.08    232403     357949753
+004960       한신공영   7530   7760    230   3.05     51681     397700250
+009440    KC그린홀딩스   3300   3400    100   3.03    139411     470087365
+
+[100 rows x 7 columns]
+2023-04-23 00:19:38,383 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:38,440 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 570
+2023-04-23 00:19:38,454 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:38,504 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 566
+2023-04-23 00:19:38,517 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:38,901 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36245
+2023-04-23 00:19:39,024 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:39,196 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36245
+2023-04-23 00:19:39,264 [INFO] top100_theme_updater.py:41 -               종목명     시가     종가   변동폭    등락률       거래량          거래대금
+티커                                                                  
+45226K    한화갤러리아우  12850  16700  3850  29.96   1260517   19718045810
+145210    다이나믹디자인   5050   6560  1510  29.90   2142513   13571072500
+152550  한국ANKOR유전    221    287    66  29.86  54757115   14852264778
+011690     와이투솔루션    952   1176   224  23.53  20750950   23586300880
+103590       일진전기   6370   7850  1480  23.23  24729650  190101707720
+...           ...    ...    ...   ...    ...       ...           ...
+001360       삼성제약   2600   2680    80   3.08    329900     878021850
+002720       국제약품   4415   4550   135   3.06    100239     453136435
+000990      DB하이텍  75400  77700  2300   3.05   5528814  439133525100
+900140   엘브이엠씨홀딩스   1785   1839    54   3.03   1845663    3350156094
+030200         KT  29800  30700   900   3.02   2042323   62194875100
+
+[100 rows x 7 columns]
+2023-04-23 00:19:39,310 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:39,431 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 569
+2023-04-23 00:19:39,448 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:39,504 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 567
+2023-04-23 00:19:39,518 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:39,736 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 35934
+2023-04-23 00:19:39,797 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:39,999 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 35934
+2023-04-23 00:19:40,065 [INFO] top100_theme_updater.py:41 -               종목명      시가      종가    변동폭    등락률        거래량          거래대금
+티커                                                                      
+004985      성신양회우   15810   20550   4740  29.98    1049318   19921294140
+152550  한국ANKOR유전     287     373     86  29.97  153406540   52996209917
+003075    코오롱글로벌우   22400   29100   6700  29.91     216829    6176199350
+002710      TCC스틸   23250   27800   4550  19.57    4042210  106720856800
+009810      플레이그램    1019    1173    154  15.11    4397922    4928015948
+...           ...     ...     ...    ...    ...        ...           ...
+017180       명문제약    2640    2700     60   2.27      79095     213217345
+009190       대양금속    3530    3610     80   2.27    3428522   12589205665
+373220   LG에너지솔루션  575000  588000  13000   2.26     235578  137146113000
+001200     유진투자증권    2460    2515     55   2.24     198921     491713275
+102460       이연제약   18340   18750    410   2.24     102631    1941207380
+
+[100 rows x 7 columns]
+2023-04-23 00:19:40,112 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:40,204 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 566
+2023-04-23 00:19:40,218 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:40,270 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 565
+2023-04-23 00:19:40,283 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:40,457 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36025
+2023-04-23 00:19:40,521 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:40,800 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 36025
+2023-04-23 00:19:40,870 [INFO] top100_theme_updater.py:41 -                종목명      시가      종가    변동폭    등락률        거래량          거래대금
+티커                                                                       
+000910         유니온    6700    8710   2010  30.00   21045334  172356598030
+004560     현대비앤지스틸   11700   15210   3510  30.00    1473368   21188841100
+012320      경동인베스트  109800  142700  32900  29.96     569893   73124989200
+004565    현대비앤지스틸우   47950   62300  14350  29.93      12385     770741300
+152550   한국ANKOR유전     373     484    111  29.76  103750259   46093639146
+...            ...     ...     ...    ...    ...        ...           ...
+012450   한화에어로스페이스  112000  113200   1200   1.07     633948   71382674305
+001800      오리온홀딩스   17090   17270    180   1.05     182748    3160758920
+026890    스틱인베스트먼트    5820    5880     60   1.03     174572    1024790030
+251270         넷마블   69600   70300    700   1.01     366444   25998254000
+33637L  솔루스첨단소재2우B   12160   12280    120   0.99      11705     143067260
+
+[100 rows x 7 columns]
+2023-04-23 00:19:40,916 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:40,978 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 563
+2023-04-23 00:19:40,995 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:41,050 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 566
+2023-04-23 00:19:41,066 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:41,321 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 35734
+2023-04-23 00:19:41,384 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-23 00:19:44,134 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 35734
+2023-04-23 00:19:44,196 [INFO] top100_theme_updater.py:41 -               종목명      시가      종가    변동폭    등락률        거래량          거래대금
+티커                                                                      
+152550  한국ANKOR유전     484     629    145  29.96   71978478   43395003505
+012030         DB    1973    2560    587  29.75  110620105  259788788024
+014680      한솔케미칼  217500  247000  29500  13.56     239742   57893581000
+005420      코스모화학   66800   75100   8300  12.43    7140502  534453739000
+011690     와이투솔루션    1099    1203    104   9.46    5716054    6591569645
+...           ...     ...     ...    ...    ...        ...           ...
+004910      조광페인트    7200    7350    150   2.08      26852     195224280
+316140     우리금융지주   11090   11320    230   2.07    2251233   25407875980
+016740         두올    2980    3040     60   2.01     205541     623319200
+030610       교보증권    5040    5140    100   1.98      23411     119000250
+009415      태영건설우    5620    5730    110   1.96       2424      13882040
+
+[100 rows x 7 columns]
+2023-04-25 01:00:03,177 [INFO] top100_theme_updater.py:23 - start_date : 2023-04-25 00:00:00, end_date : 2023-04-25 00:00:00
+2023-04-25 01:00:03,190 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-25 01:00:03,295 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 57
+2023-04-25 01:00:03,475 [INFO] util.py:11 - "None of [Index(['TRD_DD', 'OPNPRC_IDX', 'HGPRC_IDX', 'LWPRC_IDX', 'CLSPRC_IDX',\n       'ACC_TRDVOL', 'ACC_TRDVAL', 'MKTCAP'],\n      dtype='object')] are in the [columns]"
+2023-04-26 01:00:03,897 [INFO] top100_theme_updater.py:23 - start_date : 2023-04-26 00:00:00, end_date : 2023-04-26 00:00:00
+2023-04-26 01:00:03,911 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-26 01:00:04,033 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 57
+2023-04-26 01:00:04,147 [INFO] util.py:11 - "None of [Index(['TRD_DD', 'OPNPRC_IDX', 'HGPRC_IDX', 'LWPRC_IDX', 'CLSPRC_IDX',\n       'ACC_TRDVOL', 'ACC_TRDVAL', 'MKTCAP'],\n      dtype='object')] are in the [columns]"
+2023-04-27 01:00:02,757 [INFO] top100_theme_updater.py:23 - start_date : 2023-04-27 00:00:00, end_date : 2023-04-27 00:00:00
+2023-04-27 01:00:02,771 [DEBUG] connectionpool.py:228 - Starting new HTTP connection (1): data.krx.co.kr:80
+2023-04-27 01:00:02,855 [DEBUG] connectionpool.py:456 - http://data.krx.co.kr:80 "POST /comm/bldAttendant/getJsonData.cmd HTTP/1.1" 200 57
+2023-04-27 01:00:02,979 [INFO] util.py:11 - "None of [Index(['TRD_DD', 'OPNPRC_IDX', 'HGPRC_IDX', 'LWPRC_IDX', 'CLSPRC_IDX',\n       'ACC_TRDVOL', 'ACC_TRDVAL', 'MKTCAP'],\n      dtype='object')] are in the [columns]"

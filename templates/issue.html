@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% if results %}
+    <title>{{ stock_name }} WMB</title>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+    {% endif %}
+</head>
+<body class="background-results">
+{% if not results %}
+<p>WMB 와 매칭되는 정보가 없습니다.</p>
+{% else %}
+<h1>{{ stock_name }} WMB</h1>
+<div class="table-container">
+    <div class="empty-space"></div>
+    <table class="table-news">
+    <thead>
+    <tr>
+        <th>날짜</th>
+        <th>제목</th>
+        <th>내용</th>
+        <th>링크</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in results %}
+    <tr>
+        <td>{{ row['report_time'].strftime('%Y-%m-%d %H:%M:%S') }}</td>
+        <td>{{ row['title'] }}</td>
+        <td>{{ row['news_content'] }}</td>
+        <td><a href="{{ row['news_link'] }}" target="_blank">{{ row['news_link'] }}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div class="empty-space"></div>
+</div>
+{% endif %}
+</body>
+</html>

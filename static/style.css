@@ -1,0 +1,198 @@
+table {
+  border-collapse: collapse;
+  border: 2px solid #ccc;
+  margin: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+th {
+  background-color: #495057;
+  font-weight: bold;
+  color: white;
+}
+
+tr:hover {
+  background-color: #495057;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.wmb-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: navy;
+}
+
+.table-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+    color: #36454f;;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+.lead {
+    font-size: 24px;
+}
+
+.empty-space {
+  flex: 1;
+}
+
+.table-news {
+  width: 90%;
+}
+
+.table-news th,
+.table-news td {
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+}
+
+.table-news th {
+  background-color: #36454f;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.background-results {
+    background-image: url('greg-rakozy-zGORXMe0Wlc-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.background-form {
+    background-image: url('photo-1460925895917-afdab827c52f.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.no-outline:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: #36454f;
+    border-color: #36454f;
+    color: #fff;
+    box-shadow: 0 3px 5px rgba(54, 69, 79, 0.5);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #2c3a3d;
+    border-color: #2c3a3d;
+}
+
+.pages span {
+  margin: 0 5px;
+  color: #36454f;
+}
+
+.current-page {
+  color: red;
+  font-weight: bold;
+}
+
+/* Center align page numbers */
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Right align pagination buttons */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Add margin between pagination buttons and page numbers */
+.pagination .pages {
+  margin-right: 20px;
+}
+
+/* Add margin between pagination buttons */
+.pagination a {
+  margin-left: 0 10px;
+}
+
+/* Hide "Prev" button on first page */
+.pagination .prev-button:first-child {
+  display: {% if page > 10 %}inline{% else %}none{% endif %};
+}
+
+/* Hide "Next" button on last page */
+.pagination .next-button:last-child {
+  display: {% if page <= total_pages - 10 %}inline{% else %}none{% endif %};
+}
+
+.theme-register-link {
+    font-size: 14px;
+    text-align: right;
+    width: 95%;
+    display: block;
+}
+
+.theme-register-link:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+    color: #fff;
+}
+
+.search-results {
+    position: absolute;
+    background-color: white;
+    color:black;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.search-results div:hover {
+    background-color: #808080;
+    color: black;
+    cursor: pointer;
+}

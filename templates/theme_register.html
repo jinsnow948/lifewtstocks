@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1><i class="fas fa-chart-line"></i> Our Life with Stocks</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>테마 등록 페이지</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+	h1 {
+            text-align: left;
+            width: 100%;
+        }
+        table {
+            border-collapse: collapse;
+	    border: none;
+	    width: 100%;
+	    margin: 0 auto;
+        }
+        td {
+            border: none;
+            padding: 5px;
+        }
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            text-align: right;
+        }
+    </style>
+</head>
+<body class="background-results">
+    <h2>Theme Register</h2>
+    <form id="theme-register-form">
+    <div class="table-container">    
+	<table>
+	    <tr>
+	        <td><label for="theme_name">테마명:</label></td>
+	        <td><input type="text" id="theme_name" name="theme_name" required></td>
+	    </tr>
+	    <tr>
+	        <td><label for="theme_detail_name">테마 세부분류:</label></td>
+	        <td><input type="text" id="theme_detail_name" name="theme_detail_name"></td>
+	    </tr>
+	    <tr>
+	        <td><label for="related_stock_code">관련주 코드:</label></td>
+	        <td><input type="text" id="related_stock_code" name="related_stock_code" pattern="\d*" title="숫자만 입력해주세요."></td>
+	    </tr>
+	    <tr>
+	        <td><label for="related_stock_name">관련주명:</label></td>
+		<td>
+    		    <input type="text" id="related_stock_name" name="related_stock_name" autocomplete="off">
+    		    <div id="search_results" class="search-results"></div>
+    		</td>
+	    </tr>
+	    <tr>
+	        <td><label for="theme_occurrence_date">테마발생 시기:</label></td>
+	        <td><input type="date" id="theme_occurrence_date" name="theme_occurrence_date"></td>
+	    </tr>
+	    <tr>
+	        <td><label for="theme_description">테마 설명:</label></td>
+	        <td><textarea id="theme_description" name="theme_description"></textarea></td>
+	    </tr>
+	    <tr>
+		<td></td>
+		<td><button type="submit" class="btn btn-primary" name="action" value="insert">Insert</button>
+		<button type="submit" class="btn btn-primary" name="action" value="update">Update</button>
+		</td>
+	</table>
+    </div>
+    </form>
+<script>
+	 function submitForm(action) {
+  	 const form = document.getElementById("theme-register-form");
+  	 const formData = new FormData(form);
+
+  	 // Add the action field to the form data
+  	 formData.append("action", action);
+
+  	 fetch("/theme_register", {
+  	   method: "POST",
+  	   body: formData
+  	 })
+  	   .then((response) => {
+  	     if (response.ok) {
+  	       alert("테마 정보가 추가되었습니다.");
+  	     } else {
+  	       alert("테마 정보 추가에 실패했습니다.");
+  	     }
+  	   })
+  	    .catch((error) => {
+  	      console.error("Error:", error);
+  	      alert("테마 정보 추가에 실패했습니다.");
+  	    });
+  	}
+
+  	document.querySelector('button[name="action"][value="insert"]').addEventListener("click", (event) => {
+  	  event.preventDefault();
+  	  submitForm("insert");
+  	});
+
+  	document.querySelector('button[name="action"][value="update"]').addEventListener("click", (event) => {
+  	  event.preventDefault();
+  	  submitForm("update");
+  	});
+	$(document).ready(function() {
+        const stocks = {{ stocks|tojson }};
+	console.log(stocks);
+        const searchResults = $("#search_results");
+
+        function showSearchResults(query) {
+            searchResults.empty();
+            const filteredStocks = stocks.filter(stock => stock.stock_name.includes(query) || stock.ticker.includes(query));
+
+            filteredStocks.forEach(stock => {
+                const resultItem = $("<div>").text(`${stock.ticker} - ${stock.stock_name}`);
+                resultItem.on("click", function() {
+                    $("#related_stock_code").val(stock.ticker);
+                    $("#related_stock_name").val(stock.stock_name);
+                    searchResults.empty();
+                });
+                searchResults.append(resultItem);
+            });
+        }
+
+	$("#related_stock_code, #related_stock_name").on("keydown", function(event) {
+	    if (event.key === "Enter") {
+	        event.preventDefault(); // 기본 Enter 키 동작을 막습니다. (폼 제출)
+	
+	        if (searchResults.children().length > 0) {
+	            searchResults.children().first().trigger("click"); // 자동완성 목록의 첫 번째 항목을 선택합니다.
+	        }
+	    }
+	});
+
+        $("#related_stock_code, #related_stock_name").on("input", function() {
+            const query = $(this).val();
+            if (query.length > 0) {
+                showSearchResults(query);
+            } else {
+                searchResults.empty();
+            }
+        });
+    	});
+</script>
+</body>
+</html>

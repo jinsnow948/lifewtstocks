@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1><i class="fas fa-chart-line"></i> Our Life with Stocks</h1>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+	<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body class="background-results">
+<div class="container">
+    <h2>Theme Top100</h2>
+    <p class="lead">Hey, Never give up!!</p>
+    <form id="view-selection-form">
+    	<div class="form-row">
+		<div class="form-group col-md-4">
+			<div class="d-flex justify-content-between align-items-center">
+				<div>
+        				<input type="radio" id="monthly" name="view" value="monthly" checked>
+        				<label for="monthly">Monthly Calendar</label><br>
+					<span style="margin-left: 50px;"><input type="text" id="month-input" name="month">
+				</div>
+            		</div>
+		</div>
+		<div class="form-group col-md-4">
+			<div class="d-flex justify-content-between align-items-center">
+				<div>
+        				<input type="radio" id="daily" name="view" value="daily">
+        				<label for="daily">Daily Top 100</label><br>
+                			<span style="margin-left: 25px;"><input type="text" id="date-input" name="date" disabled class="float-right">
+				</div>
+            		</div>
+		</div>
+	</div>
+	<div class="form-row">
+		<div class="form-group col-md-4"></div>
+                <div class="form-group col-md-4">
+                        <div class="d-flex justify-content-between align-items-center">
+				<div>
+					<button type="button" id="submit-btn" class="btn btn-primary float-right">조회</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    </form>
+    <div id="result"></div>
+    <div id="pagination"></div>
+</div>
+    <script>
+	document.addEventListener('DOMContentLoaded', function() {
+
+		const monthlyRadioButton = document.getElementById('monthly');
+    		const dailyRadioButton = document.getElementById('daily');
+    		const monthInput = document.getElementById('month-input');
+    		const dateInput = document.getElementById('date-input');
+
+    		monthlyRadioButton.addEventListener('change', function() {
+    		    if (monthlyRadioButton.checked) {
+    		        monthInput.disabled = false;
+    		        dateInput.disabled = true;
+    		    }
+    		});
+
+    		dailyRadioButton.addEventListener('change', function() {
+    		    if (dailyRadioButton.checked) {
+    		        monthInput.disabled = true;
+    		        dateInput.disabled = false;
+    		    }
+    		});
+	
+	});
+
+	function fetchData(page = 1) {
+	    if (isNaN(page)) {
+	        page = 1;
+	    }
+	    console.log('fetchData called');
+	    const view = document.querySelector('input[name="view"]:checked').value;
+	
+	    if (view === "daily") {
+	        // dateInput 변수를 선언하고 값을 할당합니다.
+	        const dateInput = document.getElementById("date-input");
+	
+	        if (dateInput.value) {
+	            fetch("/theme", {
+	                method: "POST",
+	                headers: {
+	                    "Content-Type": "application/x-www-form-urlencoded"
+	                },
+	                body: new URLSearchParams({ date: dateInput.value, page: page })
+	            })
+	                .then(response => {
+	                    console.log('Response:', response);
+	                    return response.json();
+	                })
+	                .then(data => {
+	                    if (data.results.length > 0) {
+	
+	                        console.log('Parsed data:', data);
+
+				console.log('total_items:',data.total_items);
+				console.log('items_per_page:',data.items_per_page);
+
+				const tableHeaderText = "<a href=\"{{ url_for('theme_register') }}\" class='theme-register-link'>테마등록</a>";
+	                        const totalPages = Math.ceil(data.total_items / data.items_per_page);
+	                        let paginationHTML = '';
+
+				console.log('totalPages :',totalPages);
+	
+	                        for (let i = 1; i <= totalPages; i++) {
+			  	    console.log('page :',i);
+
+	                            paginationHTML += `<a href="#" onclick="fetchData(${i})">${i}</a>` + (i < totalPages ? '&nbsp;' : '');
+	                        }
+	
+	                        paginationHTML = `<a href="#" class="prev" onclick="fetchData(${Math.max(1, page - 1)})">&laquo; 이전</a>` + '&nbsp;' + paginationHTML;
+	                        paginationHTML += '&nbsp;' + `<a href="#" class="next" onclick="fetchData(${Math.min(totalPages, page + 1)})">다음 &raquo;</a>`;
+	
+	                        let table = tableHeaderText + '<div class="table-container"><div class="empty-space"></div><table class="table-news"><tr><th>날짜</th><th>종목명</th><th>종가</th><th>등락률</th><th>거래대금</th></tr>';
+	                        data.results.forEach(row => {
+	                            const referenceDate = new Date(row.reference_date);
+	                            const formattedDate = `${referenceDate.getFullYear() % 100}년 ${referenceDate.getMonth() + 1}월 ${referenceDate.getDate()}일`;
+	                            table += `<tr><td>${formattedDate}</td><td>${row.name}</td><td>${row.closing_price}</td><td>${row.percentage_change}</td><td>${row.transaction_amount}</td></tr>`;
+	                        });
+				    table += '</table><div class="empty-space"></div>';
+	                        document.getElementById("result").innerHTML = table;
+	
+	                        document.getElementById("pagination").innerHTML = paginationHTML;
+	                    } else {
+	                        document.getElementById("result").innerHTML = "No data found.";
+	                        document.getElementById("pagination").innerHTML = "";
+	                    }
+	                })
+	                .catch(error => {
+	                    console.error("Error fetching data:", error);
+	                    console.error("Error name:", error.name);
+	                    console.error("Error message:", error.message);
+	                    console.error("Error stack:", error.stack);
+	                    console.error("Error fetching data:", error);
+	                    document.getElementById("result").innerHTML = "Error fetching data.";
+	                });
+	        }
+	    } else {
+	        // 월별 캘린더 코드를 여기에 추가하세요.
+	    }
+	 }
+	
+	document.getElementById("submit-btn").addEventListener("click", function () {
+	    console.log('submit-btn clicked');
+	    fetchData();
+	});
+
+	$(document).ready(function() {
+            var currentDate = new Date();
+            var currentYear = currentDate.getFullYear();
+            var currentMonth = currentDate.getMonth();
+            
+            $("#month-input").datepicker({
+                format: "yyyy-mm",
+                startView: "months",
+                minViewMode: "months",
+                autoclose: true,
+                beforeShowDay: function(date) {
+                    if (date.getFullYear() === currentYear && date.getMonth() === currentMonth) {
+                        return {classes: 'focused'};
+                    }
+                }
+            });
+        });
+
+	$(document).ready(function() {
+	  $("#date-input").datepicker({
+	    dateFormat: "yy-mm-dd",
+            changeMonth: true,
+            changeYear: true,
+            showButtonPanel: true,
+            onClose: function(dateText, inst) {
+	      var day = $("#ui-datepicker-div .ui-datepicker-day :selected").val();
+              var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+              var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+              $(this).datepicker("setDate", new Date(year, month, day));
+            },
+            beforeShow: function(input, inst) {
+              if ((datestr = $(this).val()).length > 0) {
+                year = datestr.substring(0, 4);
+                month = parseInt(datestr.substring(5, 7)) - 1;
+	        day = parseInt(datestr.substring(8, 10));
+
+                $(this).datepicker("option", "defaultDate", new Date(year, month, day));
+                $(this).datepicker("setDate", new Date(year, month, day));
+              }
+            }
+          }).on('show', function(e) {
+            // Modify the datepicker position
+            $('.datepicker').css({
+                'left': function() {
+                    return $('#date-input').offset().left + 'px';
+                },
+                'top': function() {
+                    return ($('#date-input').offset().top + $('#date-input').outerHeight()) + 'px';
+                }
+            });
+          });
+        });
+
+    </script>
+</body>
+</html>

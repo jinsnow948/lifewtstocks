@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    	{% if news_results %}
+    		<title>{{ news_results[0]['stock_name'] }} 뉴스</title>
+    	{% else %}
+    		<title>뉴스</title>
+	{% endif %}
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body class="background-results">
+<div class="header">
+    {% if news_results %}
+    <h1 style='color: #36454f'>{{ news_results[0]['stock_name'] }} 시세, 뉴스</h1>
+    <a class="wmb-link" href="{{ url_for('issue', stock_name=news_results[0]['stock_name']) }}">WMB</a>
+    {%else%}
+    <h1>뉴스<h1>
+    {% endif %}
+</div>
+{% if news_results %}
+<div class="table-container">
+	<div class="empty-space"></div>
+	<table class="table-news">
+	    <thead>
+	        <tr>
+	            <th width="20%">날짜</th>
+	            <th width="15%">개인</th>
+	            <th width="15%">외국인</th>
+	            <th width="15%">기관</th>
+	            <th width="35%">뉴스</th>
+	            <th width="10%">링크</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        {% for row in news_results %}
+	        {% set news_row = news_results[loop.index0] if loop.index0 < news_results|length else {} %}
+	        <tr>
+	            <td>{{ row['trading_date'].strftime('%Y-%m-%d') }}</td>
+	            <td>{{ row['individual'] }}</td>
+	            <td>{{ row['foreign_total'] }}</td>
+	            <td>{{ row['institution'] }}</td>
+	            <td>{{ news_row['title'] }}</td>
+	            <td><a href="{{ news_row['link'] }}" target="_blank"><button class="btn btn-primary">Link</button></a></td>
+	        </tr>
+	        {% endfor %}
+	    </tbody>
+	</table>
+	<div class="empty-space"></div>
+</div>
+<div class="pagination">
+    {% if page > 1 %}
+        <a href="{{ url_for('news', code=request.args.get('code'), page=max(1, page-20), size=size) }}"><button class="btn btn-primary prev-btn">Prev</button></a>
+    {% endif %}
+    <div class="pages">
+        {% if page <= 10 %}
+            {% for p in range(1, min(20, total_pages)+1) %}
+                {% if p == page %}
+                    <span class="current-page">{{ p }}</span>
+                {% else %}
+                    <a href="{{ url_for('news', code=request.args.get('code'), page=p, size=size) }}"><span>{{ p }}</span></a>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% for p in range(max(1, page-10), min(page+10, total_pages)+1) %}
+                {% if p == page %}
+                    <span class="current-page">{{ p }}</span>
+                {% else %}
+                    <a href="{{ url_for('news', code=request.args.get('code'), page=p, size=size) }}"><span>{{ p }}</span></a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+    {% if page < total_pages %}
+        <a href="{{ url_for('news', code=request.args.get('code'), page=min(page+20, total_pages), size=size) }}"><button class="btn btn-primary next-btn">Next</button></a>
+    {% endif %}
+</div>
+{% endif %}
+</body>
+</html>

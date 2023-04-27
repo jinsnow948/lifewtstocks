@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>투자자별 순매수</title>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body class="background-results">
+<h1>{{ start_date }} ~ {{ end_date }} {{ sort_by }} 정렬(백만원)</h1>
+<div class="table-container">
+    <table>
+        <thead>
+        <tr>
+            <th>순위</th>
+            <th>코드</th>
+            <th>종목명</th>
+            <th>외국인</th>
+            <th>기관</th>
+            <th>개인</th>
+            <th>총합</th>
+        </tr>
+        </thead>
+	<tbody>
+    {% for row in trading_data[:trading_data_len//2] %}
+    <tr>
+        <td class="rank rank-{{ loop.index }}">{{ loop.index }}</td>
+        {% for key, value in row.items() %}
+        {% if loop.index == 1 %}
+        <td><a href="{{ url_for('news', code=row['code']) }}" >{{ row['code'] }}</a></td>
+        {% elif loop.index in [2, 3] %}
+        <td class="left-aligned">{{ value }}</td>
+        {% else %}
+        <td class="right-aligned">{{ "{:,.0f}".format(value/1000000) }}</td>
+        {% endif %}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</tbody>
+<table>
+<thead>
+    <tr>
+        <th>순위</th>
+        <th>코드</th>
+        <th>종목명</th>
+        <th>외국인</th>
+        <th>기관</th>
+        <th>개인</th>
+        <th>총합</th>
+    </tr>
+</thead>
+<tbody>
+    {% for row in trading_data[trading_data_len//2:] %}
+    <tr>
+        <td class="rank rank-{{ loop.index }}">{{ loop.index+trading_data_len }}</td>
+        {% for key, value in row.items() %}
+        {% if loop.index == 1 %}
+        <td><a href="{{ url_for('news', code=row['code']) }}">{{ row['code'] }}</a></td>
+        {% elif loop.index in [2, 3] %}
+        <td class="left-aligned">{{ value }}</td>
+        {% else %}
+        <td class="right-aligned">{{ "{:,.0f}".format(value/1000000) }}</td>
+        {% endif %}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+</div>
+<script>
+    const ranks = document.querySelectorAll('.rank');
+    ranks.forEach(rank => {
+        const rankNum = parseInt(rank.innerText);
+        if (rankNum === 1) {
+            rank.style.backgroundColor = '#ffc107';
+	    rank.style.color = 'white';
+        } else if (rankNum === 2) {
+            rank.style.backgroundColor = '#dc3545';
+	    rank.style.color = 'white';
+        } else if (rankNum === 3) {
+            rank.style.backgroundColor = '#007bff';
+	    rank.style.color = 'white';
+        } else {
+            rank.style.backgroundColor = '#495057';
+	    rank.style.color = 'white';
+        }
+    });
+</script>
+</body>
+</html>

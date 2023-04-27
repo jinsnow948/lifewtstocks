@@ -1,0 +1,10 @@
+{
+    "MYSQL_HOST": "localhost",
+    "MYSQL_USER": "root",
+    "MYSQL_PASSWORD": "xlaortm1!",
+    "MYSQL_DB": "mydb",
+    "api_id": 22518902,
+    "api_hash": "b9627afd7477b88ecf57e8213d085630",
+    "session_name": "pinkyBot",
+    "channel_name1": "wemakebull"
+}
